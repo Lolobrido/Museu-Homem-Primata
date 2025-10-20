@@ -1,0 +1,271 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background-color: #a9c9a4; /* Mantendo o verde */
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4f845e;
+  padding: 20px 50px;
+  border-bottom: 2px solid #000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2e6f40;
+  transform: scale(1.05);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+/* ===== CARD BASE ===== */
+.card {
+  width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  background-color: #000;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===== CARD BODY ===== */
+.card-body {
+  flex-grow: 1;
+  padding: 25px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.price {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.price:hover {
+  background-color: #2e6f40;
+  transform: scale(1.05);
+}
+
+.card-body h2 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 15px 0;
+  opacity: 0.9;
+}
+
+/* ===== BENEFÍCIOS ===== */
+.card-body h3 {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-body ul {
+  list-style: none;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.card-body ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 6px;
+}
+
+.card-body ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2e6f40;
+  font-weight: 700;
+}
+
+/* ===== CORES ESPECÍFICAS ===== */
+.bronze .card-body {
+  background-color: #d2a46b;
+}
+
+.prata .card-body {
+  background-color: #e5e5e5;
+}
+
+.diamante .card-body {
+  background-color: #9db4f2;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: linear-gradient(180deg, #2b5234 0%, #1c3822 100%);
+  color: #fff;
+  margin-top: 60px;
+  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.25);
+  border-top: 2px solid #000;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 40px 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 350px;
+  line-height: 1.5;
+}
+
+.footer-nav ul {
+  list-style: none;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #a9c9a4;
+}
+
+.footer-contact p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* ===== FOOTER RESPONSIVO ===== */
+@media (max-width: 700px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+}
