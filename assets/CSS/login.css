@@ -6,23 +6,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: #f8f8f8;
+.all{
+  border: solid 5px var(--verde-escuro);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  width: auto;
 }
-
 .container {
   display: flex;
-  width: 90%;
-  max-width: 1000px;
-  height: 600px;
-  background: white;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
   overflow: hidden;
+align-self: center;
+  margin: 80px auto; 
+  min-width: 400px;
 }
 
 /* Lado esquerdo */
@@ -36,15 +33,17 @@ body {
   align-items: center;
   padding: 40px;
   text-align: center;
+    border-right: solid 2.5px var(--verde-escuro);
+
 }
 
 .left h1 {
-  font-size: 2.2rem;
+  font-size: 4rem;
   margin-bottom: 15px;
 }
 
 .left p {
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 30px;
 }
 
@@ -55,7 +54,7 @@ body {
   padding: 12px 40px;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   transition: 0.3s;
 }
 
@@ -73,12 +72,13 @@ body {
   align-items: center;
   padding: 40px;
   background: #ffffff;
+  border-left: solid 2.5px var(--verde-escuro);
 }
 
 .right h2 {
   color: #000000;
   margin-bottom: 25px;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 form {
@@ -93,7 +93,7 @@ form input {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .btn-solid {
@@ -111,18 +111,26 @@ form input {
   background: #168059;
 }
 
+
+
 /* Responsividade */
 @media (max-width: 900px) {
-  .container {
+  .all {
     flex-direction: column;
     height: auto;
   }
 
-  .left, .right {
+  .left {
     width: 100%;
     padding: 50px 20px;
+       border-bottom:solid 2.5px var(--verde-escuro);
   }
 
+  .right {
+     width: 100%;
+    padding: 50px 20px;
+   border-top:solid 2.5px var(--verde-escuro);
+  }
   .left h1 {
     font-size: 1.8rem;
   }

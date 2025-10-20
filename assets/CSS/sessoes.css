@@ -20,8 +20,10 @@
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
-    padding: 60px 10%;
+    gap: 100px;
+
+    align-items: center;
+
 }
 
 .card {
@@ -31,6 +33,7 @@
     text-align: center;
     padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 350px;
 }
 
 .card:hover {
@@ -62,9 +65,5 @@
     text-decoration: none;
 }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
-    color: #333;
-}
+
+
